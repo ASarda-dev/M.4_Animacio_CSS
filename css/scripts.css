@@ -2,21 +2,97 @@ body {
     box-sizing: border-box;
 }
 
+.titulos{
+    background: rgb(78, 75, 75);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 1px rgb(7, 7, 7);
+    font-size: 22px;
+    border-radius: 15px;
+    border: 2px solid black;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+}
+
+.tenis{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(218, 235, 69);
+    border: 2px solid black;
+    animation-iteration-count: infinite;
+}
+
 /* nivell 1 */
+
+.box {
+    background: linear-gradient(#21b942, #17e239, #0f3515, #85e985, #0e4e1e);
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid black;
+    overflow: hidden;
+  }
+  .box b {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 0 0,
+            hsl(60, 100%, 50%) 25%,
+            hsl(60, 100%, 30%) 70%,
+            hsl(60, 100%, 1%));
+    box-shadow: inset -5px -5px 5px rgba(0,0,0,.6), 15px 15px 2px rgba(0,0,0,.04);
+    position: absolute;
+    -webkit-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    -moz-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    -o-animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+  }
+  
+  @-webkit-keyframes moveX {
+    from { left: 0; } to { left: 480px; }
+  }
+  @-moz-keyframes moveX {
+    from { left: 0; } to { left: 480px; }
+  }
+  @-o-keyframes moveX {
+    from { left: 0; } to { left: 480px; }
+  }
+  @keyframes moveX {
+    from { left: 0; } to { left: 480px; }
+  }
+  @-webkit-keyframes moveY {
+    from { top: 0; } to { top: 280px; }
+  }
+  @-moz-keyframes moveY {
+    from { top: 0; } to { top: 280px; }
+  }
+  @-o-keyframes moveY {
+    from { top: 0; } to { top: 280px; }
+  }
+  @keyframes moveY {
+    from { top: 0; } to { top: 280px; }
+  }
+/* Nivell2 */
 .cancha {
     margin: 15px;
-    /* padding: 10px; */
-    background-color: lightgreen;
-    height: 300px;
-    width: 550px;
-    border: 3px solid black;
+    background: linear-gradient(#21b942, #17e239, #0f3515, #85e985, #0e4e1e);
+    height: 32vh;
+    border: 3px dashed black;
     position: relative;
 }
 
 .ball {
     position: absolute;
-    width: 75px;
-    height: 75px;
+    left: 50%;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     border: 1px solid black;
     background: radial-gradient(circle at 0 0,
@@ -24,207 +100,142 @@ body {
             hsl(60, 100%, 30%) 70%,
             hsl(60, 100%, 1%));
 
-    animation-name: rebota;
-    animation-duration: 4s ease-in ;
-    animation-iteration-count: infinite;
 
-    /* animation: rebota 4s alternate infinite ease-in; */
+    animation: rebota 1s alternate infinite ease-in;
 }
-
-/* .shadow{
-    width: 100px;
-    height: 1px;
-    background: #000;
-    box-shadow: 0 0 5px 5px #000;
-    border-radius: 50%;
-    position: absolute;
-    top: 288px; 
-    opacity: .2;
-    transform: scale(0.5);
-    animation: sombra 1s alternate infinite ease-in;
-  }
-  @keyframes sombra{ 
-  
-    100%{
-      transform: scale(1);
-      opacity: .5
-    }
-  } */
 
 @keyframes rebota {
-    0% {
-        left: 0;
-        top: 0;
-    }
-
-    25% {
-        top: 0;
-        left: 40px;
-        bottom: 0;
-    }
-    
-    50% {
-        bottom: 0;
-        left: 80px;
-        top: 0px;
-    }
-
-    75% {
-        top: 0px;
-        left: 120px;
-        bottom: 0px;
-
-    }
-
-    100% {
-        /* transform: translateY(200px); */
-       bottom: 0;
-       right: 0;
-    }
-    /* 0% {
-        left: 0%;
-        bottom: 10%;
-    }
-
-    20% {
-        top: 98%;
-        left: 90%;
-    }
-
-    40% {
-        left: 50%;
-        top: 92%;
-    }
-
     60% {
-        top: 42%;
-        left: 60%;
+        height: 80px;
     }
 
-    80% {
-        top: 42%;
-        left: 60%;
+    90% {
+        height: 100px;
     }
 
     100% {
-        left: 50%;
-        top: 0;
-    } */
+        transform: translateY(200px);
+        height: 80px;
+    }
 }
 
-
-
-
-.contenedor {
-    /* min-height: 30vh; */
-    width: 100%;
-    height: 60vh;
-    margin: 5px;
-    border: 2px solid black;
-    background-color: green;
-    position: relative;
+.cuerpo{
+    height: 30vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(230, 58, 58);
+    padding: 10px;
+    margin: 15px;
 }
-
-
-.redonda {
-    background-color: yellow;
+/* Parte nueva nivel dos pruebas */
+.container{
+    background-color: #60BFBF ;
+    width: 40px;
+    height:40px ;
     border-radius: 50%;
-    padding: 15px;
-    height: 10px;
-    width: 10px;
+    transform-origin: center;
+    animation: rotar 2s ease forwards infinite;
+}
+.circle{
+    background-color: #60BFBF ;
+    width: 40px;
+    height:40px ;
+    border-radius: 50%;
     position: relative;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    /* animation-name: pelota; */
-    background-color: black;
-    animation-name: exer;
-
-
+}
+.circle:nth-child(1){
+    left:-100px;
+    animation: lado_iz 2s ease forwards infinite ;
 }
 
-@keyframes pelota {
-    0% {
-        left: 0;
-        top: 0;
-    }
+.circle:nth-child(2){
+    left:100px;
+    top: -40px;
+    animation: lado_der 2s ease forwards infinite ;
+}
 
-    25% {
-        left: 545px;
-        top: 0;
-    }
 
-    50% {
-        left: 545px;
-        top: 165px;
+@keyframes rotar{
+    0%{
+        transform: rotate(0deg);
+        background-color: #244F75 ;
     }
-
-    75% {
-        left: 0;
-        top: 165px;
+    50%{
+        transform: rotate(0deg);
+        background-color:  #F8BB44;
+        
     }
-
-    100% {
-        left: 0;
-        top: 0;
+    100%{
+        transform: rotate(360deg);
+background-color: #F24B4B;
     }
 }
 
-@keyframes exer {
-    0% {
-        left: 0%;
-        bottom: 10%;
+@keyframes lado_iz{
+    0%{
+        transform: translateX(0px);
+        background-color: #244F75 ;
     }
-
-    20% {
-        top: 98%;
-        left: 90%;
+    25%{
+        transform: rotate(0deg);
+        transform: translateX(-100px);
+        background-color: #60BFBF ;
+        
     }
-
-    40% {
-        left: 50%;
-        top: 92%;
+    50%{
+        transform: rotate(0deg);
+        transform: translateX(0px);
+        background-color:  #F8BB44;
+        
     }
-
-    60% {
-        top: 42%;
-        left: 60%;
+    100%{
+        transform: rotate(360deg);
+        background-color: #F24B4B;
     }
-
-    80% {
-        top: 42%;
-        left: 60%;
+}
+@keyframes lado_der{
+    0%{
+        transform: translateX(0px);
+        background-color: #244F75 ;
     }
+    25%{
+        transform: rotate(0deg);
+        transform: translateX(100px);
+        background-color: #60BFBF ;
+        
+    }
+    50%{
+        transform: rotate(0deg);
+        transform: translateX(0px);
+        background-color:  #F8BB44;
+        
+    }
+    100%{
+        transform: rotate(360deg);
+        background-color: #F24B4B;
 
-    100% {
-        left: 50%;
-        top: 0;
     }
 }
 
-#pelota {
-    position: absolute;
-    animation: rebota 1s alternate infinite ease-out;
+.enlace {
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    margin: 10px;
+    height: 20vh;
+    border: 4px solid rgb(59, 7, 59);
+    background: linear-gradient(#244F75, #60BFBF, #8C4B7E, #F8BB44, #F24B4B);
 }
 
-@-webkit-keyframes rebota {
-    0% {
-        bottom: 0;
-        height: 70px;
-    }
+.enlace a {
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: beige;
+    border: 2px solid black;
 
-    25% {
-        bottom: 400px;
-        left: 200px;
-    }
-
-    50% {
-        bottom: 0;
-        height: 70px;
-        left: 200px;
-    }
-
-    100% {
-        /* bottom: 400px; */
-    }
 }
